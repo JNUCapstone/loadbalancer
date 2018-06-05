@@ -87,7 +87,7 @@ services:
    networks:
      - web
 
-  proxy2:
+  proxy3:
     image: dockercloud/haproxy
     depends_on:
       - awesome3
