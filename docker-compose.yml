@@ -28,7 +28,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 5000:80
+      - 15000:80
     networks:
       - web
     deploy:
@@ -62,7 +62,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 6000:80
+      - 16000:80
     networks:
       - web
     deploy:
@@ -87,7 +87,7 @@ services:
    networks:
      - web
 
-  proxy2:
+  proxy3:
     image: dockercloud/haproxy
     depends_on:
       - awesome3
@@ -96,7 +96,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 7000:80
+      - 17000:80
     networks:
       - web
     deploy:
